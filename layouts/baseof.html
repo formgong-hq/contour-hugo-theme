@@ -1,0 +1,20 @@
+{{- $c := hugo.Data.content -}}
+<!doctype html>
+<html lang="{{ $c.site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ $c.site.title }}{{ else }}{{ .Title }} · {{ $c.site.name }}{{ end }}</title>
+<meta name="description" content="{{ $c.site.description }}">
+<link rel="icon" href="/img/favicon.svg">
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">{{ end }}
+<script>(function(d){d.className="js";d.dataset.accent="blue";try{var t=localStorage.getItem("ct-theme"),a=localStorage.getItem("ct-accent");if(t)d.dataset.theme=t;if(a)d.dataset.accent=a;if(sessionStorage.getItem("ct-preloaded"))d.dataset.preloaded="yes"}catch(e){}})(document.documentElement)</script>
+<link rel="stylesheet" href="{{ "site.css" | relURL }}">
+</head>
+<body>
+{{ partial "sections/header.html" . }}
+{{ block "main" . }}{{ end }}
+{{ partial "sections/footer.html" . }}
+<script src="{{ "site.js" | relURL }}" defer></script>
+</body>
+</html>
