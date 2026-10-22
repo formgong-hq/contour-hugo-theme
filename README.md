@@ -2,7 +2,7 @@
 
 A one-page portfolio for a freelance developer or a small studio that builds websites and AI features for agencies. Blueprint look: warm off-white paper, ink type, one cobalt accent, mono labels and a layout grid you can switch on. Motion runs on GSAP with ScrollTrigger and SplitText plus Lenis smooth scrolling, all bundled. The demo developer, Ada Ferrer, her clients, projects and notes are fictional.
 
-![Contour](https://raw.githubusercontent.com/formgong/hugo-theme-contour/main/images/screenshot.png)
+![Contour](https://raw.githubusercontent.com/formgong-hq/contour-hugo-theme/main/images/screenshot.png)
 
 Demo: https://contour.formgong.com
 
@@ -18,13 +18,13 @@ hugo mod init example.com/site
 # hugo.toml
 [module]
   [[module.imports]]
-    path = "github.com/formgong-hq/hugo-theme-contour"
+    path = "github.com/formgong-hq/contour-hugo-theme"
 ```
 
 Or as a git submodule:
 
 ```sh
-git submodule add https://github.com/formgong-hq/hugo-theme-contour.git themes/contour
+git submodule add https://github.com/formgong-hq/contour-hugo-theme.git themes/contour
 echo 'theme = "contour"' >> hugo.toml
 ```
 
