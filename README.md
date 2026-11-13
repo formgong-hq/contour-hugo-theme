@@ -34,8 +34,11 @@ Hugo 0.156.0 or newer, no npm packages and no Hugo extended needed. Posts, tags,
 
 ## Run the example site
 
+The folder must be named `contour`, the same as `theme` in `exampleSite/hugo.toml`:
+
 ```sh
-cd exampleSite
+git clone https://github.com/formgong-hq/contour-hugo-theme.git contour
+cd contour/exampleSite
 hugo server --themesDir ../..
 ```
 
@@ -47,6 +50,10 @@ The contact form posts to Formgong (free plan): put your access key in `form.acc
 
 Geist, Geist Mono: bundled as WOFF2 files (Latin and Latin Extended), no requests to Google Fonts. SIL Open Font License 1.1, the licence texts are next to the font files.
 
+## Third-party code
+
+`static/site.js` bundles GSAP 3.13.0 with ScrollTrigger and SplitText, which are not MIT: they are under the GSAP Standard License (https://gsap.com/standard-license), free to use, including commercially. Lenis, also bundled, is MIT.
+
 ## License
 
-MIT
+MIT, except the bundled GSAP code named above.
